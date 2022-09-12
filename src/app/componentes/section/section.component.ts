@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-section',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.css']
 })
 export class SectionComponent implements OnInit {
-
-  constructor() { }
+ 
+   
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+  irCategoria(){
+    this.router.navigate(['footer']);
   }
 
 }

@@ -8,6 +8,8 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { SectionComponent } from './componentes/section/section.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+ FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
