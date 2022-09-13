@@ -13,6 +13,6 @@ export class LomitosComponent implements OnInit {
   ngOnInit(): void {
   }
   irPagos(){
-    this.router.navigate(['footer']);
+    this.router.navigate(['comprar']);
 }
 }

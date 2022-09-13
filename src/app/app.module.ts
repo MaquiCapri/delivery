@@ -17,6 +17,8 @@ import { PromosComponent } from './componentes/footer/promos/promos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FormaspagosComponent } from './componentes/formaspagos/formaspagos.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
+import { ComprarComponent } from './componentes/comprar/comprar.component';
+import { TarjetasComponent } from './componentes/tarjetas/tarjetas.component';
 
 
 
@@ -35,7 +37,9 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
     PromosComponent,
     NosotrosComponent,
     FormaspagosComponent,
-    CarritoComponent
+    CarritoComponent,
+    ComprarComponent,
+    TarjetasComponent
     
   ],
   imports: [

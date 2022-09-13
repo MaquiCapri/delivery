@@ -13,6 +13,6 @@ export class PizzasComponent implements OnInit {
   ngOnInit(): void {
   }
 irPagos(){
-  this.router.navigate(['footer']);
+  this.router.navigate(['comprar']);
 }
 }
