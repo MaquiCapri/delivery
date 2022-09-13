@@ -9,6 +9,10 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { SectionComponent } from './componentes/section/section.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { PizzasComponent } from './componentes/footer/pizzas/pizzas.component';
+import { HamburguesasComponent } from './componentes/footer/hamburguesas/hamburguesas.component';
+import { LomitosComponent } from './componentes/footer/lomitos/lomitos.component';
+import { BebidasComponent } from './componentes/footer/bebidas/bebidas.component';
 
 
 
@@ -19,7 +23,11 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     NavComponent,
     SectionComponent,
-    FooterComponent
+    FooterComponent,
+    PizzasComponent,
+    HamburguesasComponent,
+    LomitosComponent,
+    BebidasComponent
     
   ],
   imports: [
