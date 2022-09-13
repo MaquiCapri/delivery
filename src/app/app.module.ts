@@ -13,6 +13,10 @@ import { PizzasComponent } from './componentes/footer/pizzas/pizzas.component';
 import { HamburguesasComponent } from './componentes/footer/hamburguesas/hamburguesas.component';
 import { LomitosComponent } from './componentes/footer/lomitos/lomitos.component';
 import { BebidasComponent } from './componentes/footer/bebidas/bebidas.component';
+import { PromosComponent } from './componentes/footer/promos/promos.component';
+import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
+import { FormaspagosComponent } from './componentes/formaspagos/formaspagos.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 
 
@@ -27,7 +31,11 @@ import { BebidasComponent } from './componentes/footer/bebidas/bebidas.component
     PizzasComponent,
     HamburguesasComponent,
     LomitosComponent,
-    BebidasComponent
+    BebidasComponent,
+    PromosComponent,
+    NosotrosComponent,
+    FormaspagosComponent,
+    CarritoComponent
     
   ],
   imports: [

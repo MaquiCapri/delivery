@@ -13,8 +13,18 @@ export class SectionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  irCategoria(){
-    this.router.navigate(['footer']);
+  irPizzas(){
+    this.router.navigate(['pizzas']);
+  }
+  irHamburguesas(){
+    this.router.navigate(['hamburguesas']);
   }
 
+  irLomitos(){
+    this.router.navigate(['lomitos']);
+  }
+
+  irBebidas(){
+    this.router.navigate(['bebidas']);
+  }
 }

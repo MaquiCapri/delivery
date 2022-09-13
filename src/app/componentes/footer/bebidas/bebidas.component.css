@@ -1,0 +1,42 @@
+
+h4{
+    padding-top: 15px;
+  }
+  div.row{
+   background: gray;
+   border-radius: 20px ;
+    margin:30px; 
+    /* height: 100px; */
+  }
+  
+  .flex-box{
+    display: flex;
+    
+  }
+  .container-fluid{
+      background: pink;
+   border-radius: 40px ;
+  
+  }
+  
+  div img {    
+   width: 80px;
+      
+  }
+  
+  svg{
+   
+    background: red;
+  }
+  
+  button{
+    border:none;
+    background:grey;
+  
+  }
+  
+  div{
+    margin-left: 15px;
+    
+  }
+  
