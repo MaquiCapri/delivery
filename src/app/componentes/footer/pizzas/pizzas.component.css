@@ -6,7 +6,7 @@ div.row{
  background: gray;
  border-radius: 20px ;
   margin:30px; 
-  /* height: 100px; */
+  
 }
 
 .flex-box{
@@ -14,8 +14,9 @@ div.row{
   
 }
 .container-fluid{
-    background: pink;
- border-radius: 40px ;
+    
+    background: rgba(245,136,36,1);
+
 
 }
 
@@ -25,8 +26,8 @@ div img {
 }
 
 svg{
+  background:grey;
  
-  background: red;
 }
 
 button{

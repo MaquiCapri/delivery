@@ -15,4 +15,8 @@ export class PizzasComponent implements OnInit {
 irPagos(){
   this.router.navigate(['comprar']);
 }
+
+irInicio(){
+  this.router.navigate(['']);
+}
 }

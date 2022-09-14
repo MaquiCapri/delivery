@@ -14,7 +14,8 @@ h4{
     
   }
   .container-fluid{
-      background: pink;
+  background: rgba(245,136,36,1);
+      
    border-radius: 40px ;
   
   }
@@ -25,8 +26,9 @@ h4{
   }
   
   svg{
+  
+    background:grey;
    
-    background: red;
   }
   
   button{

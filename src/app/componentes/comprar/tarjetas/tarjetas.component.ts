@@ -12,7 +12,11 @@ export class TarjetasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  irComprar(){
-    this.router.navigate(['comprar']);
+  irConfirmar(){
+    this.router.navigate(['confirmar']);
   }
+  irInicio(){
+    this.router.navigate(['']);
+  }
+
 }

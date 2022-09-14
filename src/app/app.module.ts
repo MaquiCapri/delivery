@@ -18,7 +18,9 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { FormaspagosComponent } from './componentes/formaspagos/formaspagos.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
-import { TarjetasComponent } from './componentes/tarjetas/tarjetas.component';
+import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
+import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
+import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
 
 
 
@@ -39,7 +41,9 @@ import { TarjetasComponent } from './componentes/tarjetas/tarjetas.component';
     FormaspagosComponent,
     CarritoComponent,
     ComprarComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    ConfirmarComponent,
+    EfectivoComponent
     
   ],
   imports: [

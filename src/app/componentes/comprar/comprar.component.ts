@@ -16,4 +16,12 @@ export class ComprarComponent implements OnInit {
   this.router.navigate(['tarjetas']);
  }
 
+ irEfectivo(){
+  this.router.navigate(['efectivo']);
+ }
+ irInicio(){
+  this.router.navigate(['']);
+}
+
+
 }

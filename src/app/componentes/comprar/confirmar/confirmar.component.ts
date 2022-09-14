@@ -2,20 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-bebidas',
-  templateUrl: './bebidas.component.html',
-  styleUrls: ['./bebidas.component.css']
+  selector: 'app-confirmar',
+  templateUrl: './confirmar.component.html',
+  styleUrls: ['./confirmar.component.css']
 })
-export class BebidasComponent implements OnInit {
+export class ConfirmarComponent implements OnInit {
 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-  irPagos(){
-    this.router.navigate(['comprar']);
-}
-
 irInicio(){
   this.router.navigate(['']);
 }

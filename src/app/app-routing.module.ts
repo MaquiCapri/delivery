@@ -9,8 +9,10 @@ import { LomitosComponent } from './componentes/footer/lomitos/lomitos.component
 import { PizzasComponent } from './componentes/footer/pizzas/pizzas.component';
 import { FormaspagosComponent } from './componentes/formaspagos/formaspagos.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
-import { TarjetasComponent } from './componentes/tarjetas/tarjetas.component';
+import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
 import { VistaComponent } from './vista/vista.component';
+import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
+import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
 
 const routes: Routes = [
   { path: '',component: VistaComponent},
@@ -24,6 +26,11 @@ const routes: Routes = [
   { path: 'nosotros',component:NosotrosComponent},
   { path: 'comprar',component:ComprarComponent},
   { path: 'tarjetas',component:TarjetasComponent},
+  { path: 'tarjetas',component:TarjetasComponent},
+  { path: 'confirmar',component:ConfirmarComponent},
+  { path: 'efectivo',component:EfectivoComponent},
+
+
 ];
 
 @NgModule({
