@@ -3,7 +3,7 @@ h4{
   padding-top: 15px;
 }
 div.row{
- background: gray;
+ background: white;
  border-radius: 20px ;
   margin:30px; 
   
@@ -16,7 +16,7 @@ div.row{
 .container-fluid{
     
     background: rgba(245,136,36,1);
-
+height: 600px;
 
 }
 
@@ -25,17 +25,21 @@ div img {
     
 }
 
-svg{
-  background:grey;
+button svg{
+  background: white;
+ 
+}
+
+ svg {
+  background: rgba(245,136,36,1);
  
 }
 
 button{
-  border:none;
-  background:grey;
-
+  border: none;
+  background: white;
+  border-radius: 30px;
 }
-
 div{
   margin-left: 15px;
   

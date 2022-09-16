@@ -1,44 +1,46 @@
-
 h4{
-    padding-top: 15px;
-  }
-  div.row{
-   background: gray;
-   border-radius: 20px ;
-    margin:30px; 
-    /* height: 100px; */
-  }
+  padding-top: 15px;
+}
+div.row{
+ background: white;
+ border-radius: 20px ;
+  margin:30px; 
   
-  .flex-box{
-    display: flex;
+}
+
+.flex-box{
+  display: flex;
+  
+}
+.container-fluid{
     
-  }
-  .container-fluid{
+    background: rgba(245,136,36,1);
+height: 600px;
+
+}
+
+div img {    
+ width: 80px;
+    
+}
+
+button svg{
+  background: white;
+ 
+}
+
+ svg {
   background: rgba(245,136,36,1);
-     
-   border-radius: 40px ;
+ 
+}
+
+button{
+  border: none;
+  background: white;
+  border-radius: 30px;
+}
+div{
+  margin-left: 15px;
   
-  }
-  
-  div img {    
-   width: 80px;
-      
-  }
-  
-  svg{
-    background:grey;
-   
-   
-  }
-  
-  button{
-    border:none;
-    background:grey;
-  
-  }
-  
-  div{
-    margin-left: 15px;
-    
-  }
+}
   

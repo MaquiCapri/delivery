@@ -19,4 +19,6 @@ irPagos(){
 irInicio(){
   this.router.navigate(['']);
 }
+
+ 
 }

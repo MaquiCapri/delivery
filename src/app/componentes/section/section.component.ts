@@ -27,4 +27,6 @@ export class SectionComponent implements OnInit {
   irBebidas(){
     this.router.navigate(['bebidas']);
   }
+
+
 }
