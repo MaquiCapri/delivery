@@ -10,7 +10,7 @@ div.row{
 }
 
 .flex-box{
-  display: flex;
+  display: block;
   
 }
 .container-fluid{

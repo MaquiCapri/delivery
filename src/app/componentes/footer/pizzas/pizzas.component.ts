@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Pizzas } from './pizza';
+
 
 @Component({
   selector: 'app-pizzas',
@@ -8,17 +10,51 @@ import { Router } from '@angular/router';
 })
 export class PizzasComponent implements OnInit {
 
-  constructor(private router:Router) { }
+
+  public pizzas: Pizzas[]  =[ 
+    {
+   name:"Pizza Napolitana",
+    image:"./assets/pizzaNapolitana.jpg",
+    description:"Muzzarella, tomate y aceitunas negras",
+    quantity: 0,
+    price: 1100,
+    stock: 4
+  },
+  {
+    name:"Pizza Napolitana",
+     image:"./assets/pizzaNapolitana.jpg",
+     description:"Muzzarella, tomate y aceitunas negras",
+     quantity: 0,
+     price: 1100,
+     stock: 4
+   },
+   {
+    name:"Pizza Napolitana",
+     image:"./assets/pizzaNapolitana.jpg",
+     description:"Muzzarella, tomate y aceitunas negras",
+     quantity: 0,
+     price: 1100,
+     stock: 4
+   },
+  ];
+
+ constructor(private router: Router) { }
+
 
   ngOnInit(): void {
   }
-irPagos(){
-  this.router.navigate(['comprar']);
-}
+    // this.datosDelivery.obtenerDatos().subscribe(data => {
+      // console.log(data);
+      // this.miDelivery = data;
+    // });
+  // }
 
-irInicio(){
-  this.router.navigate(['']);
-}
+  // }
+  // irPagos() {
+    // this.router.navigate(['comprar']);
+  // }
 
- 
+  // irInicio() {
+    // this.router.navigate(['']);
+  // }
 }

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./comprar.component.css']
 })
 export class ComprarComponent implements OnInit {
-  articulos=['Pizzas Napolitana', 'Pizza Fugazzetta', 'Pizza Especial'];
+  
   
  constructor(private router: Router) { }
 
@@ -26,12 +26,8 @@ export class ComprarComponent implements OnInit {
   this.router.navigate(['']);
 }
 
- articuloElejido(){
-  
-  {
-    console.log(this.articulos[0]); 
-  }
-}
+ 
+
 
 
 }

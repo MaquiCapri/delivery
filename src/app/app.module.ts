@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VistaComponent } from './vista/vista.component';
@@ -21,7 +20,7 @@ import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
 import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
 import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
-
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -49,7 +48,8 @@ import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
- FormsModule
+ FormsModule,
+ HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
