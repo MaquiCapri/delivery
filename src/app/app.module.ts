@@ -20,7 +20,7 @@ import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
 import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
 import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({

@@ -1,8 +1,11 @@
-export interface Pizzas{
-     name : string;
+export interface Pizza {
+    name: string;
     image: string;
     description: string;
     quantity: number;
     price: number;
-    stock: number
+    stock: number;
+    clearance: boolean
+
+
 }
