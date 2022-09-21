@@ -1,0 +1,27 @@
+[{
+    "name": "Pizza Napolitana",
+    "image": "./assets/pizzaNapolitana.jpg",
+    "description": "Muzzarella, tomate y aceitunas negras",
+    "quantity": 0,
+    "price": 1100,
+    "stock": 10,
+    "clearance": false
+},
+{
+    "name": "Pizza Fugazzeta",
+    "image": "./assets/pizzaNapolitana.jpg",
+    "description": "Muzzarella, cebolla y aceitunas negras",
+    "quantity": 0,
+    "price": 1300,
+    "stock": 6,
+    "clearance": false
+},
+{
+    "name": "Pizza Especial",
+    "description": "Muzzarella, tomate, rucula y aceitunas negras",
+    "quantity": 0,
+    "price": 1700,
+    "stock": 3,
+    "image": "./pizzaNapolitana.jpg",
+    "clearance": true
+}]
