@@ -1,60 +1,32 @@
-
-<div class="container-fluid ">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" 
-    fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16" (click)="irInicio()">
-    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-  </svg>
-    <h4>Bebidas</h4>
-    <div class="flex-container">
-        
-        <div class="row">
+<div class="row">
+  <h5>Lista de Bebidas</h5>
+  <div>
+    <table class="table table-striped">
+      <tbody>
+    
+        <ng-container *ngFor="let bebidas of bebidas">
+          <tr *ngIf="bebidas.stock > 0" [ngClass]="{'clearance':bebidas.clearance}">
+            <td><img [src]="bebidas.image"></td>
+            <td>{{bebidas.name}}</td>
+            <td style="font-size:70%">{{bebidas.description}}</td>
+            <td>{{bebidas.price | currency: 'ARS'}}
             
-                <div class="col-6">    
-                    <h5 class="card-title">Sprite. 500ml</h5>
-                  </div>
-                  <div class="col-6">  
-                   <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg></button>
-                  </div>
-
-                  <div class="col-6">    
-                    <h5 class="card-title">Coca-cola. 500ml</h5>
-                  </div>
-                  <div class="col-6">  
-                   <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg></button>
-                  </div>
-
-                  <div class="col-6">    
-                    <h5 class="card-title">Fanta. 500ml</h5>
-                  </div>
-                  <div class="col-6">  
-                   <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg></button>
-                  </div>
-
-                  <div class="col-6">    
-                    <h5 class="card-title">Cerveza. 500ml</h5>
-                  </div>
-                  <div class="col-6">  
-                   <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg></button>
-                  </div>
-
-                  <div class="col-6">    
-                    <h5 class="card-title">Cerveza. 1lt</h5>
-                  </div>
-                  <div class="col-6">  
-                   <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                     <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                    </svg></button>
-                  </div>
-                 
-          
-        </div>
-    </div>
-</div>
+              <div class="input-group input-group-sm mb-3">
+               
+                <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(bebidas)">-</button>
+                <input class="form-control form-control-sm" type="number" [(ngModel)]="bebidas.quantity"
+                 (focusout)="verifyPizzasQuantity(bebidas)" />
+                <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(bebidas)">+</button>
+               
+              </div>
+            </td> 
+          </tr>
+        </ng-container>
+    
+      </tbody>
+    </table>
+    <div class="text-end">
+      <button type="button" class="btn btn-primary" (click)="irCarrito()">Comprar</button>
+      <br>
+     </div>
+  </div>

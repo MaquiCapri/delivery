@@ -1,48 +1,31 @@
 
-<div class="container-fluid ">
-   
-    <h4>Lomitos</h4>
-    <div class="flex-container">
-        <div class="row">
-            <div class="flex-box">
-               
-                        <img src="./assets/perfil.png" class="img-fluid rounded-start" alt="...">
-                   <div>
-                          <h5 class="card-title">Lomito Simple</h5>
-                          <p class="card-text">Lomito, tomate y  lechuga</p>
-                          
-                        </div>
-                         <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                          </svg></button>
-                       
-            </div>
-        </div>
-        <div class="row">
-            <div class="flex-box">
-                <img src="./assets/perfil.png" class="img-fluid rounded-start" alt="...">
-                <div >    
-                <h5 class="card-title">Lomito Fugazzeta</h5>
-            
-                <p  class="card-text">Lomito, cebolla y aceitunas negras</p>
+
+  <div class="row">
+    <h5>Lista de Lomitos</h5>
+    <div>
+      <table class="table table-striped">
+        <tbody>
+      
+          <ng-container *ngFor="let lomito of lomito">
+            <tr *ngIf="lomito.stock > 0" [ngClass]="{'clearance':lomito.clearance}">
+              <td><img [src]="lomito.image"></td>
+              <td>{{lomito.name}}</td>
+              <td style="font-size:70%">{{lomito.description}}</td>
+              <td>{{lomito.price | currency: 'ARS'}}
+              
+                <div class="input-group input-group-sm mb-3">
+                 
+                  <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(lomito)">-</button>
+                  <input class="form-control form-control-sm" type="number" [(ngModel)]="lomito.quantity" (focusout)="verifyPizzasQuantity(lomito)" />
+                  <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(lomito)">+</button>
+                 
                 </div>
-               <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                </svg></button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="flex-box">
-                <img src="./assets/perfil.png" class="img-fluid rounded-start" alt="...">
-                     <div>
-                          <h5 class="card-title" >Lomito Especial</h5>
-                        
-                          <p class="card-text">Lomito, tomate, queso, lechuga y cebolla</p>
-                     </div>
-                         <button><svg (click)="irPagos()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                          </svg></button>
-            </div>
-        </div>
+              </td> 
+            </tr>
+          </ng-container>
+      
+        </tbody>
+      </table>
+
     </div>
-</div>
+  </div>

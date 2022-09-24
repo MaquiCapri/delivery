@@ -69,7 +69,7 @@ if(hamburguesa.stock < hamburguesa.quantity) {
 }
   }
   
-// irInicio() {
-    // this.router.navigate(['']);
-  // }
+ irCarrito() {
+     this.router.navigate(['carrito']);
+   }
 }
