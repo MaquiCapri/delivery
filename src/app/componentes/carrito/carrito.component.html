@@ -1,50 +1,35 @@
-<div class="container">
-    <div class="row">
-        <div class="col-3">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Menú
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <!-- <li><a class="dropdown-item active" href="#">Inicio</a></li> -->
-                    <li><a class="dropdown-item" href="#" routerLink="/formaspagos">Formas de pago</a></li>
-                    <li><a class="dropdown-item active" href="#" routerLink="/carrito">Carrito</a></li>
-                    <li><a class="dropdown-item" href="#" routerLink="/nosotros">Acerca de nosotros</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Salir</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-9">
-            <h4>Tu Carrito</h4>
-        </div>
 
-        <table class="table table-primary table-striped">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
+<div class="container"><br/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" 
+    fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16" (click)="irInicio()">
+    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg>
+    <h4>Tu Carrito</h4>
+<table class="table table-secundary table-striped">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                <ng-container *ngFor="let pizza of pizza">
-                    <tr>
-                        <td>{{pizza.name}}</td>
-                        <td>{{pizza.quantity}}</td>
-                        <td>{{pizza.price | currency: 'ARS'}}</td>
-                    </tr>
-                </ng-container>
-            </tbody>
-        </table>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let pizza of pizza">
+            <tr>
+                <td>{{pizza.name}}</td>
+                <td>{{pizza.quantity}}</td>
+                <td>{{pizza.price }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
 
-        <p class="text-end">Total: ${{total()}}</p>
-        <div class="text-end">
-            <button>Comprar</button>
-        </div>
-    </div>
+<p class="text-end">Total: {{total() | currency: 'ARS'}}</p>
+<div class="text-end">
+    <button type="button" class="btn btn-outline-primary" (click)="irPagos()">Comprar</button>
+    <br/>
+    <button type="button" class="btn btn-outline-primary"  (click)="borrarCarrito()">Borrrar carrito</button>
+
+</div>
 </div>

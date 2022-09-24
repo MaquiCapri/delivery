@@ -34,6 +34,8 @@ export class PizzasComponent implements OnInit {
   downQuantity(pizza : Pizza): void{
     if(pizza.quantity > 0){
       pizza.quantity --;
+      this.deliveryService.addToCart(pizza);
+
     }
   }
 
@@ -51,14 +53,14 @@ if(pizza.quantity < 0){
    
    }
 
+   irCarrito(){
+    this.router.navigate(['carrito']);
+  }
    
 
    }
-  // irPagos() {
-  // this.router.navigate(['comprar']);
-  // }
+   
 
-  // irInicio() {
-  // this.router.navigate(['']);
-  // }
+  
+  
   

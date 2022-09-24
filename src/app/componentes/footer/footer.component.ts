@@ -13,4 +13,8 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  irInicio() {
+    this.router.navigate(['']);
+  }
+
 }

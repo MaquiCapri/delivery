@@ -1,53 +1,43 @@
 
 h4{
   padding-top: 15px;
-}
-div.row{
- background: white;
- border-radius: 20px ;
-  margin:30px; 
-  
+  margin-left: 20px;
 }
 
-.flex-box{
-  display: block;
-  
-}
-.container-fluid{
-    
-    background: rgba(245,136,36,1);
-height: 600px;
+.row{
+  background-color:rgba(245,136,36,1) ;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 
 }
-
-div img {    
- width: 80px;
-    
-}
-
-button svg{
-  background: white;
+/* .clearance{ */
+  /* background: rgb(111, 111, 151); */
+/* background: rgba(245,136,36,1); */
  
+/* } */
+.table{
+background: antiquewhite;
+border-radius: 20px;
 }
 
- svg {
-  background: rgba(245,136,36,1);
- 
+ img{
+  width: 80px;
+  height: 70px;
+  border-radius: 110px;
+
 }
 
-button{
-  border: none;
-  background: white;
-  border-radius: 30px;
-}
-div{
-  margin-left: 15px;
-  
-}
+.col-4{
+  margin-top: 5px;
+  margin-bottom: 5px;
+ border-radius: 20px;
+ background: antiquewhite;
+ }
 
-.clearance{
-  background: rgb(111, 111, 151);
-}
+
+
+
+
 
 
 

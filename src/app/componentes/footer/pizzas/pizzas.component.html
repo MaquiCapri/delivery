@@ -1,38 +1,40 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Imagen</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Descripcion</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Stock</th>
-    </tr>
-  </thead>
-  <tbody>
 
-    <ng-container *ngFor="let pizza of pizza">
-      <tr *ngIf="pizza.stock > 0" [ngClass]="{'clearance':pizza.clearance}">
-        <td><img [src]="pizza.image"></td>
-        <td>{{pizza.name}}</td>
-        <td>{{pizza.description}}</td>
-        <td>{{pizza.price | currency: 'ARS'}}</td>
-        <td>{{pizza.stock}}</td>
-        <td>
-          <div class="input-group input-group-sm mb-3">
-           
-            <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(pizza)">-</button>
-           
-            <input class="form-control form-control-sm" type="number" [(ngModel)]="pizza.quantity" (focusout)="verifyPizzasQuantity(pizza)" />
-           
-            <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(pizza)">+</button>
-           
-          </div>
-       </td>
-      </tr>
-     
-    </ng-container>
+  <div class="row">
+    <h4>Lista</h4>
+    <div>
+      <table class="table table-striped">
+        <tbody>
+      
+          <ng-container *ngFor="let pizza of pizza">
+            <tr *ngIf="pizza.stock > 0" [ngClass]="{'clearance':pizza.clearance}">
+              <td><img [src]="pizza.image"></td>
+              <td>{{pizza.name}}</td>
+              <td style="font-size:70%">{{pizza.description}}</td>
+              <td>{{pizza.price | currency: 'ARS'}}
+              
+                <div class="input-group input-group-sm mb-3">
+                 
+                  <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(pizza)">-</button>
+                  <input class="form-control form-control-sm" type="number" [(ngModel)]="pizza.quantity" (focusout)="verifyPizzasQuantity(pizza)" />
+                  <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(pizza)">+</button>
+                 
+                </div>
+              </td> 
+            </tr>
+          </ng-container>
+      
+        </tbody>
+      </table>
 
-  </tbody>
-</table>
+    </div>
 
-<app-carrito></app-carrito>
+     <div class="text-end">
+       <button type="button" class="btn btn-outline-primary" (click)="irCarrito()">Comprar</button>
+       <br>
+      </div>
+  
+  </div>
+
+
+
+

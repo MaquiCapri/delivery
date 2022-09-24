@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DeliveryService } from 'src/app/servicios/delivery.service';
 import { Pizza } from '../footer/pizzas/pizza';
 
@@ -10,13 +11,18 @@ import { Pizza } from '../footer/pizzas/pizza';
 export class CarritoComponent implements OnInit {
  
   pizza: Pizza[] = [];
-  constructor(private deliveryService:DeliveryService ) {}
+  constructor(private deliveryService:DeliveryService, private router: Router ) {}
 
   ngOnInit(): void {
     this.deliveryService.pizza
 .subscribe(data => this.pizza = data);
 
   }
+
+ borrarCarrito(){
+  this.deliveryService.borrarCarrito();
+ }
+
  
   total(){
     let sum=0;
@@ -26,4 +32,18 @@ export class CarritoComponent implements OnInit {
     });
     return sum;
    }
+   
+   agregarPrice(pizza: Pizza){
+    if(pizza.price ){
+   }
+   
+
+   }
+   irPagos() {
+    this.router.navigate(['comprar']);
+    }
+
+    irInicio() {
+      this.router.navigate(['']);
+      }
 }

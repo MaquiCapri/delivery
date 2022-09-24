@@ -9,11 +9,11 @@
 },
 {
     "name": "Pizza Fugazzeta",
-    "image": "./assets/pizzaNapolitana.jpg",
+    "image": "./assets/pizzaFugazzeta1.jpg",
     "description": "Muzzarella, cebolla y aceitunas negras",
     "quantity": 0,
     "price": 1300,
-    "stock": 6,
+    "stock": 26,
     "clearance": false
 },
 {
@@ -21,7 +21,83 @@
     "description": "Muzzarella, tomate, rucula y aceitunas negras",
     "quantity": 0,
     "price": 1700,
-    "stock": 3,
-    "image": "./pizzaNapolitana.jpg",
+    "stock": 13,
+    "image": "./assets/pizzaRucula.jpg",
     "clearance": true
-}]
+},
+{
+    "name": "Pizza con Jamón",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, jamon y aceitunas negras",
+    "quantity": 0,
+    "price": 1500,
+    "stock": 15,
+    "clearance": false
+},
+{
+    "name": "Pizza con Huevo",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Simple",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Completa",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Big",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Lomito Simple",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Queso, tomate",
+    "quantity": 0,
+    "price": 1300,
+    "stock": 26,
+    "clearance": false
+},
+{
+    "name": "Lomito Especial",
+    "description": "Tomate, rucula y queso",
+    "quantity": 0,
+    "price": 1700,
+    "stock": 13,
+    "image": "./assets/pizzaRucula.jpg",
+    "clearance": true
+},
+{
+    "name": "Lomito Completo",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": " Jamon, tomate, huevo",
+    "quantity": 0,
+    "price": 1500,
+    "stock": 15,
+    "clearance": false
+}
+
+]
+
+

@@ -13,22 +13,28 @@ export class DeliveryService {
   private _pizzaSubjects: BehaviorSubject<Pizza[]> = new BehaviorSubject(this._pizza);
   //hago publico al observable de ese item. el item esta oculto
   public pizza: Observable<Pizza[]> = this._pizzaSubjects.asObservable();
-  constructor(private http: HttpClient) { }
+
+ constructor(private http: HttpClient) { }
 
   obtenerDatos(): Observable<any> {
     return this.http.get('assets/data/data.json');
   }
 
-  addToCart(pizza: Pizza) {
+ addToCart(pizza: Pizza) {
     let index = this._pizza.findIndex(b => b.name === pizza.name);
     if (index === -1)
       this._pizza.push(pizza);
     else
       this._pizza[index].quantity = pizza.quantity;
-   
-      if (pizza.quantity == 0) {
-      this._pizza.splice(index,1);
+
+    if (pizza.quantity == 0) {
+      this._pizza.splice(index, 1);
     }
-    
   }
+
+ 
+  borrarCarrito() {
+    this._pizza.splice(0, this._pizza.length);
+  }
+
 }
