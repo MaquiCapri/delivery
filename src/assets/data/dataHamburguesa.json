@@ -1,0 +1,29 @@
+[
+{
+    "name": "Hamburguesa Simple",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Completa",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Big",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "quantity": 0,
+    "price": 1400,
+    "stock": 16,
+    "clearance": false
+}
+]

@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Bebidas } from '../componentes/footer/bebidas/bebidas';
+import { Hamburguesa } from '../componentes/footer/hamburguesas/hamburguesa';
 import { Lomito } from '../componentes/footer/lomitos/lomitos';
 import { Pizza } from '../componentes/footer/pizzas/pizza';
 
@@ -19,7 +21,15 @@ export class DeliveryService {
  private _lomitoSubjects: BehaviorSubject<Lomito[]> = new BehaviorSubject(this._lomito);
   public lomito: Observable<Lomito[]> = this._lomitoSubjects.asObservable();
 
- constructor(private http: HttpClient) { }
+  private _bebidas: Bebidas[] = [];
+  private _bebidasSubjects: BehaviorSubject<Bebidas[]> = new BehaviorSubject(this._bebidas);
+   public bebidas: Observable<Bebidas[]> = this._bebidasSubjects.asObservable();
+ 
+   private _hamburguesa: Hamburguesa[] = [];
+  private _hamburguesaSubjects: BehaviorSubject<Hamburguesa[]> = new BehaviorSubject(this._hamburguesa);
+   public hamburguesa: Observable<Hamburguesa[]> = this._hamburguesaSubjects.asObservable();
+   
+   constructor(private http: HttpClient) { }
 
   obtenerDatos(): Observable<any> {
     return this.http.get('assets/data/data.json');
@@ -27,6 +37,14 @@ export class DeliveryService {
 
   obtenerLomitoDatos(): Observable<any> {
     return this.http.get('assets/data/dataLomito.json');
+  }
+
+  obtenerBebidasDatos(): Observable<any> {
+    return this.http.get('assets/data/dataBebidas.json');
+  }
+
+  obtenerHamburguesaDatos(): Observable<any> {
+    return this.http.get('assets/data/dataHamburguesa.json');
   }
 
 
@@ -54,8 +72,31 @@ export class DeliveryService {
     }
   }
 
- 
-  borrarCarrito() {
+  addToCartBebidas(bebidas: Bebidas) {
+    let index = this._bebidas.findIndex(b => b.name === bebidas.name);
+    if (index === -1)
+      this._bebidas.push(bebidas);
+    else
+      this._bebidas[index].quantity = bebidas.quantity;
+
+    if (bebidas.quantity == 0) {
+      this._bebidas.splice(index, 1);
+    }
+  }
+  addToCartHamburguesa(hamburguesa: Hamburguesa) {
+    let index = this._hamburguesa.findIndex(b => b.name === hamburguesa.name);
+    if (index === -1)
+      this._hamburguesa.push(hamburguesa);
+    else
+      this._hamburguesa[index].quantity = hamburguesa.quantity;
+
+    if (hamburguesa.quantity == 0) {
+      this._hamburguesa.splice(index, 1);
+    }
+  }
+
+  
+ borrarCarrito() {
     this._pizza.splice(0, this._pizza.length);
   }
 

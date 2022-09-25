@@ -31,6 +31,22 @@
             </tr>
             
         </ng-container>
+
+        <ng-container *ngFor="let bebidas of bebidas ">
+            <tr>
+                <td>{{bebidas.name}}</td>
+                <td>{{bebidas.quantity}}</td>
+                <td>{{bebidas.price }}</td>
+            </tr>
+        </ng-container>
+
+        <ng-container *ngFor="let hamburguesa of hamburguesa">
+            <tr>
+                <td>{{hamburguesa.name}}</td>
+                <td>{{hamburguesa.quantity}}</td>
+                <td>{{hamburguesa.price }}</td>
+            </tr>
+        </ng-container>hamburguesa
     </tbody>
 </table>
 

@@ -9,55 +9,29 @@ import { Hamburguesa } from './hamburguesa';
   styleUrls: ['./hamburguesas.component.css']
 })
 export class HamburguesasComponent implements OnInit {
-  hamburguesa: Hamburguesa[]=[
-    {
-      "name": "Hamburguesa Completa",
-      "image": "./assets/pizzaFugazzeta1.jpg",
-      "description": "Muzzarella, huevo, oregano y aceitunas negras",
-      "quantity": 0,
-      "price": 1400,
-      "stock": 16,
-      "clearance": false
-  },
-  {
-      "name": "Hamburguesa Big",
-      "image": "./assets/pizzaFugazzeta1.jpg",
-      "description": "Muzzarella, huevo, oregano y aceitunas negras",
-      "quantity": 0,
-      "price": 1400,
-      "stock": 16,
-      "clearance": false
-  },
-  {
-      "name": "Hamburguesa Simple",
-      "image": "./assets/pizzaFugazzeta1.jpg",
-      "description": "Queso, tomate",
-      "quantity": 0,
-      "price": 1300,
-      "stock": 26,
-      "clearance": false
-  } 
-  ];
+  hamburguesa: Hamburguesa[]=[];
  
-
-  constructor(private router: Router, private deliveryService: DeliveryService) { }
+constructor(private router: Router, private deliveryService: DeliveryService) { }
 
   ngOnInit(): void {
-    
+    this.deliveryService.obtenerHamburguesaDatos().subscribe(data => {
+      console.log(data);
+     this.hamburguesa = data;
+      });
     }
 
     
   upQuantity(hamburguesa : Hamburguesa): void{
     if(hamburguesa.stock > hamburguesa.quantity){
       hamburguesa.quantity ++;
-      this.deliveryService.addToCart(hamburguesa);
+      this.deliveryService.addToCartHamburguesa(hamburguesa);
     }
   }
 
   downQuantity(hamburguesa : Hamburguesa): void{
     if(hamburguesa.quantity > 0){
       hamburguesa.quantity --;
-      this.deliveryService.addToCart(hamburguesa);
+      this.deliveryService.addToCartHamburguesa(hamburguesa);
 
     }
   }

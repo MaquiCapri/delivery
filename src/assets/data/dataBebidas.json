@@ -1,0 +1,30 @@
+[
+    {
+    "name": "Coca-cola",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": "Queso, tomate",
+    "quantity": 0,
+    "price": 1300,
+    "stock": 26,
+    "clearance": false
+},
+{
+    "name": "Sprite",
+    "description": "Tomate, rucula y queso",
+    "quantity": 0,
+    "price": 1700,
+    "stock": 13,
+    "image": "./assets/pizzaRucula.jpg",
+    "clearance": true
+},
+{
+    "name": "Fanta",
+    "image": "./assets/pizzaFugazzeta1.jpg",
+    "description": " Jamon, tomate, huevo",
+    "quantity": 0,
+    "price": 1500,
+    "stock": 15,
+    "clearance": false
+}
+
+]

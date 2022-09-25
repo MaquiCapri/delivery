@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DeliveryService } from 'src/app/servicios/delivery.service';
+import { Bebidas } from '../footer/bebidas/bebidas';
+import { Hamburguesa } from '../footer/hamburguesas/hamburguesa';
 import { Lomito } from '../footer/lomitos/lomitos';
 import { Pizza } from '../footer/pizzas/pizza';
 
@@ -12,7 +14,9 @@ import { Pizza } from '../footer/pizzas/pizza';
 export class CarritoComponent implements OnInit {
  
   pizza: Pizza[] = [];
-  lomito: Lomito[]= []; 
+  lomito: Lomito[]= [];
+  bebidas: Bebidas[]= []; 
+  hamburguesa: Hamburguesa[]= []; 
   
   constructor(private deliveryService:DeliveryService, private router: Router ) {}
 
@@ -23,7 +27,11 @@ export class CarritoComponent implements OnInit {
     this.deliveryService.pizza
 .subscribe(data => this.pizza = data); 
 
- 
+  this.deliveryService.bebidas
+.subscribe(data => this.bebidas = data); 
+
+ this.deliveryService.hamburguesa
+.subscribe(data => this.hamburguesa = data); 
   }
 
  borrarCarrito(){
