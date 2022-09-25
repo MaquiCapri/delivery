@@ -9,54 +9,28 @@ import { Lomito } from './lomitos';
   styleUrls: ['./lomitos.component.css']
 })
 export class LomitosComponent implements OnInit {
-lomito: Lomito[]=[
-  {
-    "name": "Lomito Simple",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Queso, tomate",
-    "quantity": 0,
-    "price": 1300,
-    "stock": 26,
-    "clearance": false
-},
-{
-    "name": "Lomito Especial",
-    "description": "Tomate, rucula y queso",
-    "quantity": 0,
-    "price": 1700,
-    "stock": 13,
-    "image": "./assets/pizzaRucula.jpg",
-    "clearance": true
-},
-{
-    "name": "Lomito Completo",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": " Jamon, tomate, huevo",
-    "quantity": 0,
-    "price": 1500,
-    "stock": 15,
-    "clearance": false
-}
-
-];
+lomito: Lomito[]=[];
 
   constructor(private router:Router, private deliveryService: DeliveryService) { }
 
   ngOnInit(): void {
+    this.deliveryService.obtenerLomitoDatos().subscribe(data => {
+      console.log(data);
+     this.lomito = data;
+      });
   }
 
-  
   upQuantity(lomito : Lomito): void{
     if(lomito.stock > lomito.quantity){
       lomito.quantity ++;
-      this.deliveryService.addToCart(lomito);
+      this.deliveryService.addToCartLomito(lomito);
     }
   }
 
   downQuantity(lomito : Lomito): void{
     if(lomito.quantity > 0){
       lomito.quantity --;
-      this.deliveryService.addToCart(lomito);
+      this.deliveryService.addToCartLomito(lomito);
 
     }
   }

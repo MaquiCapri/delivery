@@ -1,4 +1,5 @@
 export interface Bebidas {
+   
     name: string;
     image: string;
     description: string;

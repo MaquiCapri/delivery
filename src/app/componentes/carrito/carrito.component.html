@@ -21,6 +21,15 @@
                 <td>{{pizza.quantity}}</td>
                 <td>{{pizza.price }}</td>
             </tr>
+
+        </ng-container>
+        <ng-container *ngFor="let lomito of lomito">
+            <tr>
+                <td>{{lomito.name}}</td>
+                <td>{{lomito.quantity}}</td>
+                <td>{{lomito.price }}</td>
+            </tr>
+            
         </ng-container>
     </tbody>
 </table>

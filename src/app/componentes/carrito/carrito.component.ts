@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DeliveryService } from 'src/app/servicios/delivery.service';
+import { Lomito } from '../footer/lomitos/lomitos';
 import { Pizza } from '../footer/pizzas/pizza';
 
 @Component({
@@ -11,35 +12,36 @@ import { Pizza } from '../footer/pizzas/pizza';
 export class CarritoComponent implements OnInit {
  
   pizza: Pizza[] = [];
+  lomito: Lomito[]= []; 
+  
   constructor(private deliveryService:DeliveryService, private router: Router ) {}
 
   ngOnInit(): void {
+    this.deliveryService.lomito
+    .subscribe(data => this.lomito = data);
+    
     this.deliveryService.pizza
-.subscribe(data => this.pizza = data);
+.subscribe(data => this.pizza = data); 
 
+ 
   }
 
  borrarCarrito(){
   this.deliveryService.borrarCarrito();
  }
-
  
-  total(){
+   total(){
     let sum=0;
 
     this.pizza.forEach(pizza => {
      sum+= pizza.quantity * pizza.price
     });
     return sum;
-   }
-   
-   agregarPrice(pizza: Pizza){
-    if(pizza.price ){
-   }
-   
 
    }
-   irPagos() {
+   
+  
+    irPagos() {
     this.router.navigate(['comprar']);
     }
 

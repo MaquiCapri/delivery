@@ -16,7 +16,9 @@
     "stock": 26,
     "clearance": false
 },
+
 {
+
     "name": "Pizza Especial",
     "description": "Muzzarella, tomate, rucula y aceitunas negras",
     "quantity": 0,
@@ -25,6 +27,7 @@
     "image": "./assets/pizzaRucula.jpg",
     "clearance": true
 },
+
 {
     "name": "Pizza con Jamón",
     "image": "./assets/pizzaFugazzeta1.jpg",
