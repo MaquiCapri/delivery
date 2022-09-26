@@ -1,17 +1,35 @@
 [
 {
     "name": "Hamburguesa Simple",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "image": "./assets/hamburguesa.jpg",
+    "description": "Hamburguesa, queso y cebolla",
+    "quantity": 0,
+    "price": 1200,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa Completa",
+    "image": "./assets/hamburguesaBig1.jpg",
+    "description": "Hamburguesa, queso, jamon, huevo y cebolla",
+    "quantity": 0,
+    "price": 1800,
+    "stock": 16,
+    "clearance": false
+},
+{
+    "name": "Hamburguesa con panceta",
+    "image": "./assets/hamburguesaPanceta.jpg",
+    "description": "Doble hamburguesa con panceta, queso y huevo",
     "quantity": 0,
     "price": 1400,
     "stock": 16,
     "clearance": false
 },
 {
-    "name": "Hamburguesa Completa",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "name": "Hamburguesa con jamon y queso",
+    "image": "./assets/hamburgesaEspecial.jpg",
+    "description": "Hamburguesa,tomate, jamon y queso",
     "quantity": 0,
     "price": 1400,
     "stock": 16,
@@ -19,10 +37,10 @@
 },
 {
     "name": "Hamburguesa Big",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Muzzarella, huevo, oregano y aceitunas negras",
+    "image": "./assets/hamburguesaBig1.jpg",
+    "description": "Doble hamburguesa, jamon, queso, tomate, huevo y cebolla",
     "quantity": 0,
-    "price": 1400,
+    "price": 2100,
     "stock": 16,
     "clearance": false
 }

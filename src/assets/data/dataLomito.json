@@ -1,28 +1,28 @@
 [
     {
-    "name": "Lomito SimpleT",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Queso, tomate",
+    "name": "Lomito Simple",
+    "image": "./assets/lomitoSimple1.png",
+    "description": "Lomito, Queso, tomate y jamon",
     "quantity": 0,
     "price": 1300,
     "stock": 26,
     "clearance": false
 },
 {
-    "name": "Lomito EspecialT",
-    "description": "Tomate, rucula y queso",
+    "name": "Lomito Especial",
+    "description": "Lomito, tomate, rucula y queso",
     "quantity": 0,
     "price": 1700,
     "stock": 13,
-    "image": "./assets/pizzaRucula.jpg",
+    "image": "./assets/lomitoEspecial.jpg",
     "clearance": true
 },
 {
     "name": "Lomito Completo",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": " Jamon, tomate, huevo",
+    "image": "./assets/lomitoRucula.jpg",
+    "description": "Lomito, jamon, tomate,queso y huevo",
     "quantity": 0,
-    "price": 1500,
+    "price": 1800,
     "stock": 15,
     "clearance": false
 }

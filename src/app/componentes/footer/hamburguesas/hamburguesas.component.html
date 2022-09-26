@@ -1,28 +1,28 @@
 <div class="row">
-    <h5>Lista de Hamburguesas</h5>
-    <div>
-      <table class="table table-striped">
-        <tbody>
-      
-          <ng-container *ngFor="let hamburguesa of hamburguesa">
-            <tr *ngIf="hamburguesa.stock > 0" [ngClass]="{'clearance':hamburguesa.clearance}">
-              <td><img [src]="hamburguesa.image"></td>
-              <td>{{hamburguesa.name}}</td>
-              <td style="font-size:70%">{{hamburguesa.description}}</td>
-              <td>{{hamburguesa.price | currency: 'ARS'}}
-              
-                <div class="input-group input-group-sm mb-3">
-                 
-                  <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(hamburguesa)">-</button>
-                  <input class="form-control form-control-sm" type="number" [(ngModel)]="hamburguesa.quantity"
-                   (focusout)="verifyPizzasQuantity(hamburguesa)" />
-                  <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(hamburguesa)">+</button>
-                 
-                </div>
-              </td> 
-            </tr>
-          </ng-container>
-      
-        </tbody>
-      </table>
-    </div>
+  <h5>Lista de Hamburguesas</h5>
+  <div>
+    <table class="table table-striped">
+      <tbody>
+
+        <ng-container *ngFor="let hamburguesa of hamburguesa">
+          <tr *ngIf="hamburguesa.stock > 0" [ngClass]="{'clearance':hamburguesa.clearance}">
+            <td><img [src]="hamburguesa.image"></td>
+            <td>{{hamburguesa.name}}</td>
+            <td style="font-size:70%">{{hamburguesa.description}}</td>
+            <td>{{hamburguesa.price | currency: 'ARS'}}
+
+              <div class="input-group input-group-sm mb-3">
+
+                <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(hamburguesa)">-</button>
+                <input class="form-control form-control-sm" type="number" [(ngModel)]="hamburguesa.quantity"
+                  (focusout)="verifyPizzasQuantity(hamburguesa)" />
+                <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(hamburguesa)">+</button>
+
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+
+      </tbody>
+    </table>
+  </div>

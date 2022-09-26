@@ -1,28 +1,74 @@
 [
     {
     "name": "Coca-cola",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": "Queso, tomate",
+    "image": "./assets/cocacola.png",
+    "description": "500ml.",
     "quantity": 0,
-    "price": 1300,
+    "price": 300,
     "stock": 26,
     "clearance": false
 },
 {
     "name": "Sprite",
-    "description": "Tomate, rucula y queso",
+    "description": "500ml",
     "quantity": 0,
-    "price": 1700,
+    "price": 300,
     "stock": 13,
-    "image": "./assets/pizzaRucula.jpg",
+    "clearance": true,
+    "image": "./assets/sprite.jpg"
+
+},
+{
+    "name": "Fanta",
+    "image": "./assets/fanta.png",
+    "description": " 500ml.",
+    "quantity": 0,
+    "price": 300,
+    "stock": 15,
+    "clearance": false
+},
+{
+    "name": "Coca-cola",
+    "image": "./assets/cocacola.png",
+    "description": "1lt.",
+    "quantity": 0,
+    "price": 500,
+    "stock": 26,
+    "clearance": false
+},
+{
+    "name": "Sprite",
+    "description": "1lt.",
+    "quantity": 0,
+    "price": 500,
+    "stock": 13,
+    "image": "./assets/sprite.jpg",
     "clearance": true
 },
 {
     "name": "Fanta",
-    "image": "./assets/pizzaFugazzeta1.jpg",
-    "description": " Jamon, tomate, huevo",
+    "image": "./assets/fanta.png",
+    "description": "1lt.",
     "quantity": 0,
-    "price": 1500,
+    "price": 500,
+    "stock": 15,
+    "clearance": false
+},
+{
+    "name": "Cerveza Heineken",
+    "description": "1lt.",
+    "quantity": 0,
+    "price": 500,
+    "stock": 13,
+    "image": "./assets/cervezaHeineken.jpg",
+    "clearance": true
+},
+{
+    "name": "Ceerveza Schneider",
+    "image": "./assets/cervezaSchneider.png",
+    "description": "1lt.",
+    "quantity": 0,
+    "price": 500,
     "stock": 15,
     "clearance": false
 }

@@ -3,30 +3,30 @@
   <div>
     <table class="table table-striped">
       <tbody>
-    
+
         <ng-container *ngFor="let bebidas of bebidas">
           <tr *ngIf="bebidas.stock > 0" [ngClass]="{'clearance':bebidas.clearance}">
             <td><img [src]="bebidas.image"></td>
             <td>{{bebidas.name}}</td>
             <td style="font-size:70%">{{bebidas.description}}</td>
             <td>{{bebidas.price | currency: 'ARS'}}
-            
+
               <div class="input-group input-group-sm mb-3">
-               
+
                 <button type="button" class="btn btn-light btn-sm" (click)="downQuantity(bebidas)">-</button>
                 <input class="form-control form-control-sm" type="number" [(ngModel)]="bebidas.quantity"
-                 (focusout)="verifyPizzasQuantity(bebidas)" />
+                  (focusout)="verifyPizzasQuantity(bebidas)" />
                 <button type="button" class="btn btn-light btn-sm" (click)="upQuantity(bebidas)">+</button>
-               
+
               </div>
-            </td> 
+            </td>
           </tr>
         </ng-container>
-    
+
       </tbody>
     </table>
     <div class="text-end">
       <button type="button" class="btn btn-primary" (click)="irCarrito()">Comprar</button>
       <br>
-     </div>
+    </div>
   </div>

@@ -1,60 +1,58 @@
-
-<div class="container"><br/>
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" 
-    fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16" (click)="irInicio()">
-    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+<div class="container"><br />
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left"
+        viewBox="0 0 16 16" (click)="irInicio()">
+        <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
     </svg>
     <h4>Tu Carrito</h4>
-<table class="table table-secundary table-striped">
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor="let pizza of pizza">
+    <table class="table table-secundary table-striped">
+        <thead>
             <tr>
-                <td>{{pizza.name}}</td>
-                <td>{{pizza.quantity}}</td>
-                <td>{{pizza.price }}</td>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+
             </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let pizza of pizza">
+                <tr>
+                    <td>{{pizza.name}}</td>
+                    <td>{{pizza.quantity}}</td>
+                    <td>{{pizza.price }}</td>
+                </tr>
+            </ng-container>
+            <ng-container *ngFor="let lomito of lomito">
+                <tr>
+                    <td>{{lomito.name}}</td>
+                    <td>{{lomito.quantity}}</td>
+                    <td>{{lomito.price }}</td>
+                </tr>
+            </ng-container>
 
-        </ng-container>
-        <ng-container *ngFor="let lomito of lomito">
-            <tr>
-                <td>{{lomito.name}}</td>
-                <td>{{lomito.quantity}}</td>
-                <td>{{lomito.price }}</td>
-            </tr>
-            
-        </ng-container>
+            <ng-container *ngFor="let bebidas of bebidas ">
+                <tr>
+                    <td>{{bebidas.name}}</td>
+                    <td>{{bebidas.quantity}}</td>
+                    <td>{{bebidas.price }}</td>
+                </tr>
+            </ng-container>
 
-        <ng-container *ngFor="let bebidas of bebidas ">
-            <tr>
-                <td>{{bebidas.name}}</td>
-                <td>{{bebidas.quantity}}</td>
-                <td>{{bebidas.price }}</td>
-            </tr>
-        </ng-container>
+            <ng-container *ngFor="let hamburguesa of hamburguesa">
+                <tr>
+                    <td>{{hamburguesa.name}}</td>
+                    <td>{{hamburguesa.quantity}}</td>
+                    <td>{{hamburguesa.price }}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
 
-        <ng-container *ngFor="let hamburguesa of hamburguesa">
-            <tr>
-                <td>{{hamburguesa.name}}</td>
-                <td>{{hamburguesa.quantity}}</td>
-                <td>{{hamburguesa.price }}</td>
-            </tr>
-        </ng-container>hamburguesa
-    </tbody>
-</table>
+    <p class="text-end">Total: {{total() | currency: 'ARS'}}</p>
+    <div class="text-end">
+        <button type="button" class="btn btn-outline-primary" (click)="irPagos()">Comprar</button>
+        <br />
+        <button type="button" class="btn btn-outline-primary" (click)="borrarCarrito()">Borrrar carrito</button>
 
-<p class="text-end">Total: {{total() | currency: 'ARS'}}</p>
-<div class="text-end">
-    <button type="button" class="btn btn-outline-primary" (click)="irPagos()">Comprar</button>
-    <br/>
-    <button type="button" class="btn btn-outline-primary"  (click)="borrarCarrito()">Borrrar carrito</button>
-
-</div>
+    </div>
 </div>
