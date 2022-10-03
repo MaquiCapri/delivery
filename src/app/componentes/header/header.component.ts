@@ -15,4 +15,8 @@ export class HeaderComponent implements OnInit {
   IrFormaspagos(){
     this.router.navigate(['formaspagos']);
   }
+
+  login(){
+    this.router.navigate(['login']);
+  }
 }

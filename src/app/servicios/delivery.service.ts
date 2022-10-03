@@ -98,6 +98,11 @@ export class DeliveryService {
   
  borrarCarrito() {
     this._pizza.splice(0, this._pizza.length);
+    this._lomito.splice(0, this._lomito.length);
+    this._hamburguesa.splice(0, this._hamburguesa.length);
+    this._bebidas.splice(0, this._bebidas.length);
+
+
   }
 
 }

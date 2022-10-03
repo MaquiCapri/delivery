@@ -12,48 +12,59 @@ import { Pizza } from '../footer/pizzas/pizza';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
- 
+
   pizza: Pizza[] = [];
-  lomito: Lomito[]= [];
-  bebidas: Bebidas[]= []; 
-  hamburguesa: Hamburguesa[]= []; 
-  
-  constructor(private deliveryService:DeliveryService, private router: Router ) {}
+  lomito: Lomito[] = [];
+  bebidas: Bebidas[] = [];
+  hamburguesa: Hamburguesa[] = [];
+
+  constructor(private deliveryService: DeliveryService, private router: Router) { }
 
   ngOnInit(): void {
     this.deliveryService.lomito
-    .subscribe(data => this.lomito = data);
-    
+      .subscribe(data => this.lomito = data);
+
     this.deliveryService.pizza
-.subscribe(data => this.pizza = data); 
+      .subscribe(data => this.pizza = data);
 
-  this.deliveryService.bebidas
-.subscribe(data => this.bebidas = data); 
+    this.deliveryService.bebidas
+      .subscribe(data => this.bebidas = data);
 
- this.deliveryService.hamburguesa
-.subscribe(data => this.hamburguesa = data); 
+    this.deliveryService.hamburguesa
+      .subscribe(data => this.hamburguesa = data);
   }
 
- borrarCarrito(){
-  this.deliveryService.borrarCarrito();
- }
- 
-   total(){
-    let sum=0;
+  borrarCarrito() {
+    this.deliveryService.borrarCarrito();
+  }
+
+  total() {
+    let sum = 0;
 
     this.pizza.forEach(pizza => {
-     sum+= pizza.quantity * pizza.price
-    });
+      sum += pizza.quantity * pizza.price
+    }),
+      this.lomito.forEach(lomito => {
+        sum += lomito.quantity * lomito.price
+      }),
+
+      this.hamburguesa.forEach(hamburguesa => {
+        sum += hamburguesa.quantity * hamburguesa.price
+      }),
+
+      this.bebidas.forEach(bebidas => {
+        sum += bebidas.quantity * bebidas.price
+      });
+
     return sum;
+  }
 
-   }
-   
-  
-    irPagos() {
+
+  irPagos() {
     this.router.navigate(['comprar']);
-    }
+  }
 
-    irInicio() {
-      this.router.navigate(['']);
-      }
+  irInicio() {
+    this.router.navigate(['']);
+  }
 }

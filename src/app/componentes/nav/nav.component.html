@@ -1,35 +1,41 @@
 <div class="container">
-   <br/>
-  <h4>Hola,Sofía</h4>
-  <h1>Buenos días!</h1>
+    <br />
+    <h4>Hola,Sofía</h4>
+    <h1>Buenos días!</h1>
 
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle"
-     type="button" id="dropdownMenuButton2"
-        data-bs-toggle="dropdown" aria-expanded="false">
-       Qué estás buscando?
-    </button>
-    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        
-        <li><a class="dropdown-item" href="#" routerLink="/pizzas">Pizzas</a></li>
-        <li><a class="dropdown-item" href="#" routerLink="/hamburguesas">Hamburguesas</a></li>
-        <li><a class="dropdown-item active" href="#" routerLink="/lomitos">Lomitos</a></li>
-        <li><a class="dropdown-item" href="#" routerLink="/bebidas">Bebidas</a></li>
-         <!-- <li>  -->
+    <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Qué estás buscando?
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+
+            <li><a class="dropdown-item" href="#pizza">Pizzas</a></li>
+            <li><a class="dropdown-item" href="#hambur">Hamburguesas</a></li>
+            <li><a class="dropdown-item active" href="#lomitos" routerLink="/lomitos">Lomitos</a></li>
+            <li><a class="dropdown-item" href="#bebidas" >Bebidas</a></li>
+            <!-- <li>  -->
             <!-- <hr class="dropdown-divider"> -->
-        <!-- </li> -->
-        
-    </ul>
-   </div>
-   <br/>
-   <h4>Categorías:</h4>
+            <!-- </li> -->
+
+        </ul>
+    </div>
+    <br />
+    <h4>Categorías:</h4>
 </div>
 <app-section></app-section>
-<br/>
-
+<br />
+<div id="pizza">
     <app-pizzas></app-pizzas>
+</div>
 <div class=" container-fluid">
-    <app-hamburguesas></app-hamburguesas>
-   <app-lomitos></app-lomitos>
-   <app-bebidas></app-bebidas>
+    <div id="hambur">
+        <app-hamburguesas></app-hamburguesas>
+    </div>
+    <div id="lomitos">
+        <app-lomitos></app-lomitos>
+    </div>
+    <div id="bebidas">
+        <app-bebidas></app-bebidas>
+    </div>
 </div>

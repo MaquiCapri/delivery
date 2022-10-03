@@ -19,8 +19,9 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
 import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
-import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
+
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './componentes/comprar/login/login.component';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import {HttpClientModule} from '@angular/common/http';
     ComprarComponent,
     TarjetasComponent,
     ConfirmarComponent,
-    EfectivoComponent
+   LoginComponent,
     
   ],
   imports: [

@@ -12,7 +12,9 @@ import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { TarjetasComponent } from './componentes/comprar/tarjetas/tarjetas.component';
 import { VistaComponent } from './vista/vista.component';
 import { ConfirmarComponent } from './componentes/comprar/confirmar/confirmar.component';
-import { EfectivoComponent } from './componentes/comprar/efectivo/efectivo.component';
+
+import { NavComponent } from './componentes/nav/nav.component';
+import { LoginComponent } from './componentes/comprar/login/login.component';
 
 const routes: Routes = [
   { path: '',component: VistaComponent},
@@ -28,7 +30,10 @@ const routes: Routes = [
   { path: 'tarjetas',component:TarjetasComponent},
   { path: 'tarjetas',component:TarjetasComponent},
   { path: 'confirmar',component:ConfirmarComponent},
-  { path: 'efectivo',component:EfectivoComponent},
+  { path: 'login',component:LoginComponent},
+  
+  { path: 'nav',component:NavComponent},
+
 
 
 ];
