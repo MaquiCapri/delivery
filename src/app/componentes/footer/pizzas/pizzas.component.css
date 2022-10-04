@@ -29,6 +29,9 @@ border-radius: 20px;
 h5{
   margin-top: 5px;
 }
+div input{
+  width: 3px;
+}
 
 
 
