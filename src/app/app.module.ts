@@ -7,7 +7,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { SectionComponent } from './componentes/section/section.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PizzasComponent } from './componentes/footer/pizzas/pizzas.component';
 import { HamburguesasComponent } from './componentes/footer/hamburguesas/hamburguesas.component';
 import { LomitosComponent } from './componentes/footer/lomitos/lomitos.component';
@@ -44,13 +44,15 @@ import { LoginComponent } from './componentes/comprar/login/login.component';
     TarjetasComponent,
     ConfirmarComponent,
    LoginComponent,
+
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
  FormsModule,
- HttpClientModule
+ HttpClientModule,
+ ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

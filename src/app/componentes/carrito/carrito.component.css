@@ -1,9 +1,9 @@
-button{
+.text-end button{
     margin: 5px;
 padding: 5px;
 border-radius: 20px;
   }
-
+ 
   h4{
     margin: 10px;
     text-align: center;
@@ -16,7 +16,7 @@ border-radius: 20px;
 
   .container{
   background-color:rgba(245,136,36,1) ;
-
+height: 600px;
   }
 
   
